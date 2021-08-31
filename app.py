@@ -1,7 +1,7 @@
 import streamlit as st
 import compute
 
-st.title('SuperHeroes - Gender-bias in Superhero World')
+st.title('SuperHeroes - Gender-biased World')
 
 menu = "Gender Infographic"
 
