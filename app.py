@@ -3,7 +3,7 @@ import compute
 
 st.title('SuperHeroes - World of Good vs. Evil')
 
-menu = "Good vs Evil Infographic"
+menu = "Gender Infographic"
 
 
 st.markdown('''
