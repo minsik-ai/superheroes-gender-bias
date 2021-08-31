@@ -4,7 +4,7 @@ import compute
 st.title('SuperHeroes - World of Good vs. Evil')
 
 st.sidebar.title('Navigation')
-menu = st.sidebar.radio("", options=["Good vs Evil Infographic", "Gender Infographic", "ML Prediction"])
+menu = "Good vs Evil Infographic"
 
 
 st.markdown('''
