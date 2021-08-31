@@ -3,7 +3,6 @@ import compute
 
 st.title('SuperHeroes - World of Good vs. Evil')
 
-st.sidebar.title('Navigation')
 menu = "Good vs Evil Infographic"
 
 
