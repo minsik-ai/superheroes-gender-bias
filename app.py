@@ -1,18 +1,19 @@
 import streamlit as st
 import compute
 
-st.title('SuperHeroes - World of Good vs. Evil')
+st.title('SuperHeroes - Gender-biased World')
 
 menu = "Gender Infographic"
 
 
 st.markdown('''
 
-**Superheroes exist in a World of Good vs. Evil.**
+**Superheroes exist in Gender-biased World.**
 
-Some superheroes are Good and some are Evil. How does this happen? What kind of internal distribution exists for Good 
-and Evil aligned superheroes? In this ML-powered Visualization we investigate characteristics of Good and Evil Superheroes.
-You can even predict whether your custom Superhero aligns more with Good vs. Evil.
+Gender bias is a favorite research topic amongst scientists. GPT-3 Researchers found out that gendered bias is
+very prominent among model generated texts. More details on original GPT-3 paper : [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165), 
+[Summary Article](https://medium.com/fair-bytes/how-biased-is-gpt-3-5b2b91f1177). In this Visualization we dive into continous variables in Superheroes dataset
+and display surprising bias that we found.
 ''')
 
 stats = ["Combat", "Durability", "Intelligence", "Power", "Speed", "Strength"]
