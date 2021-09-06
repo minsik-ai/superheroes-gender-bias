@@ -3,7 +3,7 @@ import compute
 
 st.title('SuperHeroes - World of Good vs. Evil')
 
-menu = "ML Prediction"
+menu = "Gender Infographic"
 
 
 st.markdown('''
@@ -15,6 +15,8 @@ and Evil aligned superheroes? In this ML-powered Visualization we investigate ch
 You can even predict whether your custom Superhero aligns more with Good vs. Evil.
 ''')
 
+stats = ["Combat", "Durability", "Intelligence", "Power", "Speed", "Strength"]
+
 if menu == "Good vs Evil Infographic":
     st.markdown('''
 ## Good vs. Evil Infographic
@@ -22,12 +24,18 @@ if menu == "Good vs Evil Infographic":
 Distribution of continuous variables are plotted using KDE and pair-wise plotting.
 
 ### Interesting Insights
-1. Good Superheroes tend to have **more Power** than Bad superheroes.
+1. Good Superheroes tend to be **better at Combat** than Bad or Neutral superheroes.
 2. Bad Superheroes tend to be **more Intelligent** than Good or Neutral Superheroes.
 3. Bad and Neutral Superheroes tend to be **more Durable** than Good Superheroes.
-4. Bad Superheroes tend to be **heavier** than Good Superheroes.
+4. Neutral Superheroes tend to have **more Power** than Good or Bad Superheroes.
     ''')
     st.image("./alignment_viz.png")
+
+    for stat in stats:
+        st.markdown(f'''
+        ### {stat}''')
+
+        st.image(f"./stats/{stat.lower()}_alignment.png")
 
 elif menu == "Gender Infographic":
     st.markdown('''
@@ -36,12 +44,19 @@ elif menu == "Gender Infographic":
 Distribution of continuous variables are plotted using KDE and pair-wise plotting.
     
 ### Interesting Insights
-1. Male Superheroes tend to be **slightly more Intelligent**(*Bias!*) than Female Superheroes.
-2. Male Superheroes tend to be **more Durable**(*Bias!*) than Female Superheroes.
-3. Male Superheroes tend to have **more Power**(*Bias!*) than Female Superheroes.
-4. Male Superheroes tend to be **heavier and taller** than female Superheroes.
+1. Male Superheroes tend to have **more Power**(*Bias!*) than Female Superheroes.
+2. Male Superheroes tend to have **more Strength**(*Bias!*) than Female Superheroes.
+3. Male Superheroes tend to be **more Durable**(*Bias!*) than Female Superheroes.
+4. Most Female Superheroes tend to have similar Intelligence, while Male is more varied.
         ''')
     st.image("./gender_viz.png")
+
+    for stat in stats:
+        st.markdown(f'''
+        ### {stat}''')
+
+        st.image(f"./stats/{stat.lower()}_gender.png")
+
 elif menu == "ML Prediction":
 
     st.markdown('''
